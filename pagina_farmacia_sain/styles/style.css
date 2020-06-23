@@ -1,0 +1,164 @@
+:root{
+    --fondo_principal: rgb(196, 196, 196);
+    --fondo_secundario: rgb(34, 192, 34);
+    --letra_principal: black;
+    --letra_secundaria: white;
+}
+
+
+
+
+.fondo_body {
+    background-color: var(--fondo_principal);
+}
+
+
+.pre_nav{
+    height: 100%;
+    background-color: var(--fondo_secundario);
+    
+}
+
+.pos_nav{
+    height: 100%;
+    background-color: grey;
+   
+    font-size: small;
+}
+
+.pos_nav_letra{
+    color: yellow !important;
+}
+
+a {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: var(--letra_secundaria);
+    text-decoration: none;
+    
+
+}
+
+
+a:link{
+    color: rgb(63, 168, 63);
+}
+
+a:hover{
+    text-decoration: underline;
+    color: red !important;
+    
+}
+a::selection{
+    color: white;
+    background: orchid;
+}
+
+
+.margen_etiqueta{
+    margin-top: 30px;
+    margin-bottom: -10px;
+}
+
+
+
+
+.contenedor-imagen{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+   
+}
+
+.contenedor-imagen2{
+    position: relative;
+    width: 92%;
+    height: 100%;
+    margin: 10px;
+   
+}
+
+
+.foto-tamanio {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+
+  /* el overlay sirve para sobreponer un efecto por encima de una imagen o boton */
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    /* opacity  es para poner el grado de transparencia u opacidad al objeto y funciona entre el grado 0 como lo más transparente a 1 que es lo más opaco*/
+    opacity: 0;
+    /* la transicion ease es un efecto de transicion que comienza lento, luego rapido y vuelve a terminar lento*/
+    transition: .5s ease;
+    background-color: aliceblue;
+
+    
+  }
+  
+  /* Esto hace que cuando pasemos el mouse por sobre la imagen, se active el overlay */
+  .contenedor-imagen:hover .overlay  {
+    opacity: 0.9;
+    
+    
+  }
+  
+  .texto-en-overlay {
+      overflow: hidden;
+    color: green;
+    font-weight: bolder;
+    font-size: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+   
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* webkit es para que sea compatible con chrome, safari y opera */
+    -webkit-transform: translate(-50%, -50%);
+    /* ms es para que sea compatible con microsoft edge */
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    
+    
+  }
+
+  .descripcion{
+      text-align: center;
+      margin: 15 px;
+  }
+
+  .nombre_producto{
+    width: 100%;
+    font-size: small;
+    
+}
+
+.nombre_producto2{
+    width: 100%;
+    font-size: x-large;
+    font-weight: bolder;
+    
+}
+
+.ubicacion_mapa{
+   margin-left: 25%;
+   margin-bottom: 10%;
+}
+
+.tamanio_precio{
+    font-size: xx-large;
+}
+
+.tamanio_boton_comprar{
+    width: 50%;
+    margin-top: 10px;
+}

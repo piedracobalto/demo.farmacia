@@ -1,0 +1,2 @@
+El body está hecho por bootsrap y está basado en la página de la sante.
+El overlay está sacado del enlance https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_image_overlay_fade
