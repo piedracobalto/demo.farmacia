@@ -34,18 +34,21 @@ a {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: var(--letra_secundaria);
     text-decoration: none;
-    
+    transition-property: color, background-color;
+    transition-duration: 0.7s;
 
 }
 
 
 a:link{
+    
     color: rgb(63, 168, 63);
 }
 
 a:hover{
     text-decoration: underline;
     color: red !important;
+   
     
 }
 a::selection{
@@ -59,14 +62,38 @@ a::selection{
     margin-bottom: -10px;
 }
 
+.contenedor-galeria{
+    display: grid;
+    grid-template-columns: auto 2fr;
+    justify-content: space-between;
+    justify-items: center;
+    margin-bottom: 5vh;
+}
 
+.galeria__navs{
+    display: none;
+}
+.galeria__productos{
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+justify-items: flex-start;
+justify-self: stretch;
 
+}
+
+.contenedor-producto{
+
+    min-width: 100px;
+    max-width: 150px;
+    margin: 1vh;
+}
 
 .contenedor-imagen{
     position: relative;
-    width: 150px;
+    width:150px;
     height: 150px;
-    margin: 10px;
+    
    
 }
 
@@ -105,14 +132,15 @@ a::selection{
   }
   
   /* Esto hace que cuando pasemos el mouse por sobre la imagen, se active el overlay */
-  .contenedor-imagen:hover .overlay  {
+  .contenedor-imagen:hover .overlay{
     opacity: 0.9;
-    
     
   }
   
+
   .texto-en-overlay {
-      overflow: hidden;
+     
+    overflow: hidden;
     color: green;
     font-weight: bolder;
     font-size: 20px;
@@ -162,3 +190,20 @@ a::selection{
     width: 50%;
     margin-top: 10px;
 }
+
+@media screen and (min-width:576px){
+    .galeria__navs{
+    display: grid;
+    justify-content: flex-start;
+    align-content: flex-start;
+    justify-self: flex-start;
+    }
+
+    .contenedor-producto{
+
+        min-width: 171px;
+        max-width: 200px;
+    
+    }
+}
+
